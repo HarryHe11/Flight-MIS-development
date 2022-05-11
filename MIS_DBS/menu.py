@@ -1,0 +1,51 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(510, 300)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.label.setFont(font)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setContentsMargins(-1, -1, -1, 15)
+        self.gridLayout.setHorizontalSpacing(10)
+        self.gridLayout.setVerticalSpacing(15)
+        self.gridLayout.setObjectName("gridLayout")
+        self.queryButton = QtWidgets.QPushButton(self.centralwidget)
+        self.queryButton.setMinimumSize(QtCore.QSize(250, 40))
+        self.queryButton.setMaximumSize(QtCore.QSize(250, 40))
+        self.queryButton.setObjectName("queryButton")
+        self.gridLayout.addWidget(self.queryButton, 1, 0, 1, 1)
+        self.manageButton = QtWidgets.QPushButton(self.centralwidget)
+        self.manageButton.setMinimumSize(QtCore.QSize(250, 40))
+        self.manageButton.setMaximumSize(QtCore.QSize(250, 40))
+        self.manageButton.setObjectName("manageButton")
+        self.gridLayout.addWidget(self.manageButton, 0, 0, 1, 1)
+        self.gridLayout_2.addLayout(self.gridLayout, 1, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.gridLayout_2, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "主界面"))
+        self.label.setText(_translate("MainWindow", "欢迎使用票务管理系统"))
+        self.manageButton.setText(_translate("MainWindow", "票务管理"))
+        self.queryButton.setText(_translate("MainWindow", "票务查询"))
+
