@@ -1,4 +1,4 @@
-# Flight-MIS-development
+# Flight tickets Information Management System
 Flight tickets Information Management System, based on MySQL and PyQT5
 
 Content of the project
